@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile View</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Custom CSS for basic sliding effect */
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider-item {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            width: 85%;
+            margin-right: 15px;
+            
+            border-radius: 12px;
+        }
+
+        .first {
+      backdrop-filter: blur(30px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+        .glass {
+      backdrop-filter: blur(30px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+        .lastone {
+      margin: 10px;
+      backdrop-filter: blur(30px);
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 30px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+    }
+        .populor {
+      margin: 10px;
+      backdrop-filter: blur(30px);
+      border-radius: 30px;
+    }
+    </style>
+
+</head>
+<body class="bg-black text-white font-sans">
+
+<!-- Navbar -->
+<nav class="bg-red-900 p-4 transition-all duration-300 ease-in-out hover:bg-gray-800">
+    <div class="flex justify-between items-center">
+        <!-- Logo with animation -->
+        <div class="text-white text-xl font-bold transition-all pr-4 duration-300 ease-in-out hover:text-purple-400">
+            <a href="#">FaFo</a>
+        </div>
+
+        <!-- Search Input -->
+        <div class="flex items-center backdrop-blur-lg bg-black/30 mr-2 text-sm rounded-full w-2/3 px-4 py-1 transition-all duration-300 ease-in-out focus-within:bg-gray-700">
+            <svg class="w-5 h-6 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <input type="text" class="bg-transparent text-white px-2 w-full focus:outline-none" placeholder="Search...">
+        </div>
+
+        <!-- Icons with hover animation -->
+        <div class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors duration-300 ease-in-out">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2a5 5 0 00-5 5v1H3a1 1 0 000 2h2v7h10v-7h2a1 1 0 000-2h-2V7a5 5 0 00-5-5z" />
+                </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors duration-300 ease-in-out">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</nav>
+<!-- ==================================================================================================================== -->
+
+
+
+<div class="bg-gradient-to-r from-black via-gray-900 to-black flex justify-center p-4">
+
+    <!-- Main Container -->
+    <div class="w-full max-w-sm mx-auto">
+      
+      <!-- Header Section with Blur Effect -->
+      <div class=" first rounded-3xl p-3 text-center text-white shadow-lg  justify-center">
+       <img src="https://img.freepik.com/premium-photo/generative-ai-digital-art-chopping-kitchen-board-with-knife-ingredients-around-it_686498-3248.jpg" alt="Product 1" class="w-full h-full rounded-2xl justify-center">
+      </div>
+  
+      <!-- Glassmorphism Card Section -->
+
+      <div class=" bg-[url('https://i.pinimg.com/564x/a6/3f/09/a63f0954e59261f531fa8769fb74210a.jpg')] mt-8 glass p-6 text-center text-white shadow-xl">
+        <h2 class="text-2xl font-bold">Welcome to the fafo.</h2>
+        <p class="mt-3 text-gray-200 font-bold text-xs">
+        FaFo that connects you with local restaurants, grocery stores, and other food providers and allow customers to browse menus, place orders, and have food delivered directly to their doorstep
+        </p>
+        
+        <!-- CTA Button -->
+        <button class="mt-6 px-4 py-2 bg-white text-blue-600 font-semibold rounded-full shadow-lg text-xs hover:bg-gray-200 transition">
+          Learn More
+        </button>
+      </div>
+  
+      <!-- Blurred Footer Section -->
+      <div class="mt-10 text-center text-white">
+        <div class="flex justify-center">
+          <!-- Blurry Icon Boxes -->
+          <div class="glass w-12 h-12 rounded-full flex items-center justify-center mx-2">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+            </svg>
+          </div>
+          <div class="glass w-12 h-12 rounded-full flex items-center justify-center mx-2">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </div>
+          <div class="glass w-12 h-12 rounded-full flex items-center justify-center mx-2">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5"></path>
+            </svg>
+          </div>
+        </div>
+  
+        <p class="mt-4 opacity-70 mb-5">Designed for a unique experience</p>
+      </div>
+    </div>
+  
+</div>
+
+
+
+<!-- ======================= slider ============================================================================================= -->
+
+<div class="bg-gray-900 populor text-white"></body>
+
+    <!-- Slider Section -->
+    <section class="py-2">
+        <h2 class="text-2xl font-bold text-center mb-6">Popular Picks</h2>
+        <div class="slider">
+            <!-- Slide 1 -->
+                <div class="flex flex-col items-center m-2">
+                    <img src="https://i.pinimg.com/236x/4e/93/0c/4e930ce59248ebcaa635df0d074e09c6.jpg" alt="Product 1" class="w-56 h-36 rounded-lg mb-4">
+                    <button class="bg-red-600 text-xs text-white py-2 px-1 rounded-full">Shop Now</button>
+                </div>
+            <!-- Slide 1 -->
+                <div class="flex flex-col items-center m-2">
+                    <img src="https://i.pinimg.com/236x/9b/8a/86/9b8a867c9fe9de2b98a3ff3e71bf9be2.jpg" alt="Product 1" class="w-56 h-36 rounded-lg mb-4" >
+                    <button class="bg-red-600 text-xs text-white py-2 px-1 rounded-full">Shop Now</button>
+                </div>
+            <!-- Slide 1 -->
+                <div class="flex flex-col items-center m-2">
+                    <img src="https://i.pinimg.com/736x/78/e2/3b/78e23b8e1698662a266b41f242f4b9a4.jpg" alt="Product 1" class="w-56 h-36 rounded-lg mb-4">
+                    <button class="bg-red-600 text-xs text-white py-2 px-1 rounded-full">Shop Now</button>
+                </div>
+
+        </div>
+    </section>
+
+</div>
+    
+    <!-- ======================= home ============================================================================================= -->
+    
+    <!-- Top Delivery Section -->
+    <div class="p-4 flex">
+        <p class="text-sm">Delivery to 1600 Amphitheater Way</p>
+        <button class="text-sm flex items-center ml-2">
+            <span>▼</span>
+        </button>
+    </div>
+
+    <!-- Filter Tags -->
+    <div class="flex gap-2 overflow-auto px-4 pb-4">
+        <button class="bg-gray-800 text-sm text-white px-4 py-1 rounded-full border border-white">Organic</button>
+        <button class="bg-gray-800 text-sm text-white px-4 py-1 rounded-full border border-white">Gluten-free</button>
+        <button class="bg-gray-800 text-sm text-white px-4 py-1 rounded-full border border-white">Dairy-free</button>
+    </div>
+
+    <!-- Popular on Jetsnack -->
+    <div class="px-4 py-2">
+        <div class="flex justify-between items-center">
+            <h2 class="text-lg font-semibold">Popular on Jetsnack</h2>
+            <a href="#" class="text-sm text-purple-400">→</a>
+        </div>
+
+        <div class="flex gap-4 overflow-auto py-5">
+            
+            
+            
+            <!-- Card 1 -->
+            <div class="bg-gray-800 rounded-lg p-4 w-48  ">
+                <div class="w-28 h-36 bg-gradient-to-r from-red-600 to-red-900 rounded-lg mb-2 flex items-center justify-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs-qhjH3L8AdXVExcZvZxSGyUjKofDqv3Dp5gloE-jmcLcOD0FzT8rlcIaK5LxB_9D158&usqp=CAU" alt="Cupcake" class="rounded-full h-20 w-20 object-cover">
+                </div>
+                <p class="text-white font-bold">Cupcake</p>
+                <p class="text-gray-400 text-sm">A tag line</p>
+            </div>
+            <!-- Card 1 -->
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+                <div class="w-28 h-36 bg-gradient-to-r from-red-600 to-red-900 rounded-lg mb-2 flex items-center justify-center">
+                    <img src="https://i.pinimg.com/236x/ed/ad/54/edad540374c32b1047e6e13611c7b4e1.jpg" alt="Cupcake" class="rounded-full h-20 w-20 object-cover">
+                </div>
+                <p class="text-white font-bold">Cupcake</p>
+                <p class="text-gray-400 text-sm">A tag line</p>
+            </div>
+            <!-- Card 1 -->
+            <div class="bg-gray-800 rounded-lg p-4 w-48 ">
+                <div class="w-28 h-36 bg-gradient-to-r from-red-600 to-red-900 rounded-lg mb-2 flex items-center justify-center">
+                    <img src="https://i.pinimg.com/236x/cd/16/26/cd1626db1b55b783434d15a1eb11c90e.jpg" alt="Cupcake" class="rounded-full h-20 w-20 object-cover">
+                </div>
+                <p class="text-white font-bold">Cupcake</p>
+                <p class="text-gray-400 text-sm">A tag line</p>
+            </div>
+            <!-- Card 1 -->
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+                <div class="w-28 h-36 bg-gradient-to-r from-red-600 to-red-900 rounded-lg mb-2 flex items-center justify-center">
+                    <img src="https://i.pinimg.com/236x/c1/30/9a/c1309aeda3c953acfbdbb826949ac702.jpg" alt="Cupcake" class="rounded-full h-20 w-20 object-cover">
+    </div>
+    <p class="text-white font-bold">Cupcake</p>
+    <p class="text-gray-400 text-sm">A tag line</p>
+</div>
+<!-- Card 1 -->
+<div class="bg-gray-800 rounded-lg p-4 w-48">
+    <div class="w-28 h-36 bg-gradient-to-r from-red-600 to-red-900 rounded-lg mb-2 flex items-center justify-center">
+        <img src="https://i.pinimg.com/236x/73/47/59/7347598069213f47b836df14725b92ea.jpg" alt="Cupcake" class="rounded-full h-20 w-20 object-cover">
+    </div>
+    <p class="text-white font-bold">Cupcake</p>
+    <p class="text-gray-400 text-sm">A tag line</p>
+</div>
+<!-- Card 1 -->
+<div class="bg-gray-800 rounded-lg p-4 w-48 ">
+    <div class="w-28 h-36 bg-gradient-to-r from-red-600 to-red-900 rounded-lg mb-2 flex items-center justify-center">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/296d50145454153.629eed93c6874.png" alt="Cupcake" class="rounded-full h-20 w-20 object-cover ">
+    </div>
+    <p class="text-white font-bold">Cupcake</p>
+    <p class="text-gray-400 text-sm">A tag line</p>
+</div>
+</div>
+</div>
+
+
+<!-- Popular on Jetsnack -->
+<div class="px-4 py-2">
+        <div class="flex justify-between items-center">
+            <h2 class="text-lg font-semibold">Popular on Jetsnack</h2>
+            <a href="#" class="text-sm text-purple-400">→</a>
+        </div>
+        <div class="flex gap-4 overflow-auto py-4">
+            <!-- Circular Item 1 -->
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center">
+                    <img src="https://i.pinimg.com/236x/77/4f/21/774f21a499e8d9491fc4dd0558b7e035.jpg" alt="Chips" class="rounded-full h-16 w-16 object-cover">
+                </div>
+                <p class="text-white text-sm mt-2">Chips</p>
+            </div>
+            <!-- Circular Item 2 -->
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center">
+                    <img src="https://i.pinimg.com/236x/31/5a/fd/315afd0f842fd0c2dbcfc08ca2780c94.jpg" alt="Pretzels" class="rounded-full h-16 w-16 object-cover">
+                </div>
+                <p class="text-white text-sm mt-2">Pretzels</p>
+            </div>
+            <!-- Circular Item 3 -->
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center">
+                    <img src="https://i.pinimg.com/236x/dc/fa/96/dcfa96a00461ece493a57dcd09be7bb2.jpg" alt="Smoothie" class="rounded-full h-16 w-16 object-cover">
+                </div>
+                <p class="text-white text-sm mt-2">Smoothie</p>
+            </div>
+            <!-- Circular Item 3 -->
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center">
+                    <img src="https://i.pinimg.com/236x/e2/02/ad/e202ad873d462d27ed6ea2b5fe4a8194.jpg" alt="Smoothie" class="rounded-full h-16 w-16 object-cover">
+                </div>
+                <p class="text-white text-sm mt-2">Smoothie</p>
+            </div>
+            <!-- Circular Item 3 -->
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center">
+                    <img src="https://i.pinimg.com/236x/fd/57/06/fd5706a42fd11be9e6c09c512fcf9107.jpg" alt="Smoothie" class="rounded-full h-16 w-16 object-cover">
+                </div>
+                <p class="text-white text-sm mt-2">Smoothie</p>
+            </div>
+            <!-- Circular Item 3 -->
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center">
+                    <img src="https://i.pinimg.com/236x/fd/57/06/fd5706a42fd11be9e6c09c512fcf9107.jpg" alt="Smoothie" class="rounded-full h-16 w-16 object-cover">
+                </div>
+                <p class="text-white text-sm mt-2">Smoothie</p>
+            </div>
+        </div>
+    </div>
+
+  
+    
+    <!-- Bottom Navigation -->
+    <div class="fixed bottom-0 left-0 right-0 bg-gray-900 py-2 px-4">
+        <div class="flex justify-between text-white">
+            <div class="text-center">
+             <H2><i class="fa-solid fa-house" style="color: #ffffff;"></i></H2>
+                <p class="text-xs">Home</p>
+            </div>
+            <div class="text-center">
+                <H2> <i class="fa-solid fa-plus" style="color: #ffffff;"></i> </H2>
+                <p class="text-xs">Explore</p>
+            </div>
+            <div class="text-center">
+                <H2><i class="fa-solid fa-cart-plus" style="color: #ffffff;"></i></H2>
+                <p class="text-xs">Cart</p>
+            </div>
+        </div>
+    </div>
+    
+
+<!-- WFH Section -->
+<section class="bg-black py-8">
+    <div class="max-w-screen-lg mx-auto px-4">
+        <!-- Section Title -->
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold text-white">WFH Favourites</h2>
+            <a href="#" class="text-purple-400 hover:text-purple-500 text-sm">View All</a>
+        </div>
+ 
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Card 1 -->
+            <div class="bg-gray-800 rounded-xl p-2 transition hover:bg-gray-700 ">
+                <div class="flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/17869140/pexels-photo-17869140/free-photo-of-plate-of-small-uttapam.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Product 1" class="w-28 h-28 rounded-full mb-4">
+                    <h3 class="text-white text-lg font-semibold">South</h3>
+                    <p class="text-gray-400 text-sm">A comfortable way to work.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gray-800 rounded-xl p-2 transition hover:bg-gray-700">
+                <div class="flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/19902868/pexels-photo-19902868/free-photo-of-pasta-with-sauce-on-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Product 2" class="w-28 h-28 rounded-full mb-4">
+                    <h3 class="text-white text-lg font-semibold">Italian</h3>
+                    <p class="text-gray-400 text-sm">Block distractions.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-gray-800 rounded-xl p-2 transition hover:bg-gray-700">
+                <div class="flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/19301007/pexels-photo-19301007/free-photo-of-tray-with-miniature-pizza.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Product 3" class="w-28 h-28 rounded-full mb-4">
+                    <h3 class="text-white text-lg font-semibold">Maxican</h3>
+                    <p class="text-gray-400 text-sm">For better posture.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-gray-800 rounded-xl p-2 transition hover:bg-gray-700">
+                <div class="flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/11829700/pexels-photo-11829700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product 4" class="w-28 h-28 rounded-full mb-4">
+                    <h3 class="text-white text-lg font-semibold">Chinece</h3>
+                    <p class="text-gray-400 text-sm mb-9">Stay energized.</p>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-gray-800 rounded-xl p-2 transition hover:bg-gray-700">
+                <div class="flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/8617361/pexels-photo-8617361.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Product 3" class="w-28 h-28 rounded-full mb-4">
+                    <h3 class="text-white text-lg font-semibold">punjabi</h3>
+                    <p class="text-gray-400 text-sm">For better posture.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-gray-800 rounded-xl p-2 transition hover:bg-gray-700">
+                <div class="flex flex-col items-center">
+                    <img src="https://media.istockphoto.com/id/2154971535/photo/famous-gujrati-snack-dhokla-made-with-gram-flour-and-sugar-syrup-decorated-with-mint-and.jpg?b=1&s=612x612&w=0&k=20&c=a8tZeglPXFIIW3SQecFnsD73fbcLHLl-AMVsCqznz8w=" alt="Product 4" class="w-28 h-28 rounded-full mb-4">
+                    <h3 class="text-white text-lg font-semibold">gujrati</h3>
+                    <p class="text-gray-400 text-sm mb-9">Stay energized.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="lastone flex items-center justify-center mb-24">
+
+    <!-- Card Container -->
+    <div class="max-w-sm w-full shadow-lg rounded-3xl p-4">
+      
+      <!-- Image Section -->
+      <div class="relative">
+        <img src="https://img.freepik.com/free-vector/top-view-modern-restaurant-table-with-flat-design_23-2147903834.jpg" alt="Reservoir Image" class="w-full h-56 object-cover rounded-2xl">
+        <!-- Top left arrow button -->
+        <button class="absolute top-2 left-2 bg-white rounded-full p-2 shadow-md">
+          <svg class="w-5 h-5 text-gray-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <!-- Top right heart button -->
+        <button class="absolute top-2 right-2 bg-white rounded-full p-2 shadow-md">
+          <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Text Section -->
+      <div class="mt-4">
+        <h2 class="text-xl font-semibold">Jatibarang Reservoir</h2>
+        <p class="text-gray-300">$120 <span class="text-sm">/person</span></p>
+      </div>
+  
+      <!-- Info Section -->
+      <div class="mt-4 flex justify-between items-center text-sm">
+        <div class="flex items-center text-orange-400">
+          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+          </svg>
+          <span>5 hours</span>
+        </div>
+        <div class="flex items-center text-yellow-500">
+          <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.518 4.674a1 1 0 00.95.69h4.905c.969 0 1.371 1.24.588 1.81l-3.97 2.883a1 1 0 00-.364 1.118l1.518 4.674c.3.921-.755 1.688-1.54 1.118l-3.97-2.883a1 1 0 00-1.175 0l-3.97 2.883c-.784.57-1.838-.197-1.539-1.118l1.518-4.674a1 1 0 00-.364-1.118L2.988 9.1c-.784-.57-.38-1.81.588-1.81h4.905a1 1 0 00.95-.69l1.518-4.674z"/>
+          </svg>
+          <span>4.8 out of 5</span>
+        </div>
+      </div>
+  
+      <!-- Overview Section -->
+      <div class="mt-4">
+        <div class="flex border-b-2 border-gray-500">
+          <button class="text-orange-500 font-semibold pb-2 border-b-2 border-orange-500 mr-4">Overview</button>
+          <button class="text-gray-300 pb-2">Reviews</button>
+        </div>
+        <p class="text-gray-300 text-sm mt-2">
+          Jatibarang Reservoir is known for its beautiful views, serene environment, and the tranquility it brings to those who visit.
+        </p>
+      </div>
+  
+      <!-- Book Now Button -->
+      <div class="mt-6">
+        <button class="w-full py-3 bg-red-700 text-white rounded-full text-center shadow-md">
+          Book your table now
+        </button>
+
+
+        
+        
+        
+    </div>
+</div>
+
+</div>
+
+
+
+<footer class="bg-gray-900 text-white p-8 ">
+    <div class="container mx-auto flex flex-wrap justify-between">
+      <!-- Left Section -->
+      <div class="w-full md:w-1/3 mb-6 md:mb-0">
+        <h2 class="text-2xl font-bold">FaFo </h2>
+        <p class="text-sm mt-2">Subtitle goes here</p>
+        <p class="mt-4">Your descriptive text goes here. It can be a brief introduction or any other relevant information.</p>
+      </div>
+      <!-- Images Section -->
+      <div class="w-full md:w-1/3 mb-6 md:mb-0 flex flex-wrap">
+        <div class="w-1/3 p-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrhup3WLaYGFKwa4hi1qQvyR5JPSUlzjxJIzHCKTTAc06-YM7rmkOY6FMBQ7qVdD0ngmo&usqp=CAU" alt="Image 1" class="w-full h-auto rounded-lg">
+        </div>
+        <div class="w-1/3 p-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Oa7XVlCbhY2useMWwij5TK1z-Ff64_TDJ5MKAuLpUwbcxH-ONARKkztBsAmvjTCcfTE&usqp=CAU" alt="Image 2" class="w-full h-auto rounded-lg">
+        </div>
+        <div class="w-1/3 p-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVUe2IIQk3Ucn55HgTpucS37FQbYmX4akcdXPTqrCK-1yadN9Bkp0gUiR-Yrk01mahnCo&usqp=CAU" alt="Image 3" class="w-full h-auto rounded-lg">
+        </div>
+        <div class="w-1/3 p-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_lK-2eLkSluGmhG8yCarQmBZHxJdsc7k6-ecCgPibxGiR4lIT3TpqR48YgMRYLBPL-80&usqp=CAU" alt="Image 4" class="w-full h-auto rounded-lg">
+        </div>
+        <div class="w-1/3 p-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0CiXQlf5ww0QykJIogVR506o6t1n6RQsmxk7IjXsSLZgw_YomB08CxoALZSsoleMCsYY&usqp=CAU" alt="Image 5" class="w-full h-auto rounded-lg">
+        </div>
+        <div class="w-1/3 p-1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH7Hh0cZGHMDdTVbwZ8V-NEVfYOWmn6zRbl5vA8nh4DlcBXiakST19DkkuabAs6yGElog&usqp=CAU" alt="Image 6" class="w-full h-auto rounded-lg">
+        </div>
+      </div>
+      <!-- Navigation Links Section -->
+      <div class="w-full md:w-1/3 flex flex-wrap">
+        <div class="w-1/2">
+          <h3 class="font-bold">Navigation</h3>
+          <ul class="mt-2">
+            <li><a href="#" class="hover:underline">Napomena</a></li>
+            <li><a href="#" class="hover:underline">Meet Us</a></li>
+            <li><a href="#" class="hover:underline">Experience</a></li>
+            <li><a href="#" class="hover:underline">Hire Us</a></li>
+            <li><a href="#" class="hover:underline">Blog</a></li>
+          </ul>
+        </div>
+        <div class="w-1/2">
+          <h3 class="font-bold">Social Media</h3>
+          <ul class="mt-2">
+            <li><a href="#" class="hover:underline">Behance</a></li>
+            <li><a href="#" class="hover:underline">Vimeo</a></li>
+            <li><a href="#" class="hover:underline">Facebook</a></li>
+            <li><a href="#" class="hover:underline">Twitter</a></li>
+            <li><a href="#" class="hover:underline">Instagram</a></li>
+            <li><a href="#" class="hover:underline">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <p>© 2024 Your Company. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+
+
+
+
+
+
+</body>
+</html>
+
+
